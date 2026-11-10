@@ -1,0 +1,168 @@
+{
+  "verified_on": "2026-11-10",
+  "scope": "Six publicly identified works by Xiaokai (Bill) Rong; no claim about unpublished work.",
+  "works": [
+    {
+      "id": "attention",
+      "name": "CodeSteer",
+      "title": "Post-Hoc Attention Steering of Large Language Models for Robust Code Understanding under Obfuscation",
+      "year": 2026,
+      "venue": "ASE 2026",
+      "topic": "ATTENTION / CODE UNDERSTANDING",
+      "question": "当变量名被混淆，怎样让模型重新关注有用的代码结构？",
+      "paper": "https://arxiv.org/abs/2609.26102",
+      "samples": {
+        "story": "在噪声中找到线索",
+        "lab": "Attention 显微镜",
+        "challenge": "混淆代码破译"
+      },
+      "summary": "CodeSteer uses program-analysis relevance signals to steer model attention at inference time, improving reasoning about obfuscated code.",
+      "method_facts": [
+        "Backward slices guide output prediction.",
+        "Control-flow paths guide execution reasoning.",
+        "Attention is steered toward semantically relevant elements; this is training-free.",
+        "The paper includes a buffer-overflow detection case study."
+      ],
+      "boundary": "Teaching demonstrations use authored examples and deterministic browser logic. They do not run the paper system or reproduce its empirical evaluation.",
+      "sources": [
+        "https://aashishyadavally.github.io/assets/pdf/pub-ase2026.pdf",
+        "https://arxiv.org/abs/2609.26102"
+      ],
+      "code": "https://github.com/Billrong2/LLM-Attention-Fixation"
+    },
+    {
+      "id": "adaptagent",
+      "name": "AdaptAgent",
+      "title": "AdaptAgent: A Multi-agent, Domain-Guided Reasoning Framework for Code Adaptation",
+      "year": 2026,
+      "venue": "ISSTA 2026",
+      "topic": "AGENTS / CODE ADAPTATION",
+      "question": "修改一段代码时，怎样把需求、领域上下文与验证连起来？",
+      "paper": "https://arxiv.org/abs/2608.04459",
+      "samples": {
+        "story": "代码跨仓库的交接",
+        "lab": "适配流水线",
+        "challenge": "修复任务室"
+      },
+      "summary": "Given a snippet, intent, target repository, and location, AdaptAgent coordinates specialized agents to produce an adapting patch.",
+      "method_facts": [
+        "Agents exchange typed artifacts.",
+        "Intent Summarizer extracts goals; Policy Agent derives rules from six adaptation categories.",
+        "Domain Planner orders the plan; Context Miner extracts sibling-method semantics.",
+        "Code Adapter produces a minimal unified diff; compiler-based Verifier supplies iterative feedback."
+      ],
+      "boundary": "Teaching demonstrations use authored examples and deterministic browser logic. They do not run the paper system or reproduce its empirical evaluation.",
+      "sources": [
+        "https://arxiv.org/abs/2608.04459",
+        "https://conf.researchr.org/details/issta-2026/issta-2026-research-papers/193/AdaptAgent-A-Multi-agent-Domain-Guided-Reasoning-Framework-for-Code-Adaptation"
+      ],
+      "code": "https://github.com/Billrong2/Code-Adaptation"
+    },
+    {
+      "id": "lamda",
+      "name": "LλMDA",
+      "title": "Large Language Model-Aided Partial Program Dependence Analysis",
+      "year": 2026,
+      "venue": "ICSE 2026",
+      "topic": "PARTIAL PROGRAM / DEPENDENCE",
+      "question": "只有一段不完整的代码，怎样恢复可靠的程序依赖？",
+      "paper": "https://doi.org/10.1145/3744916.3773119",
+      "samples": {
+        "story": "补全上下文，保留边界",
+        "lab": "依赖星图",
+        "challenge": "切片考古"
+      },
+      "summary": "LλMDA fills missing context in partial code so conventional dependence analysis can work, then retains results relevant to the original snippet.",
+      "method_facts": [
+        "Two phases: Context Augmentation and Analysis.",
+        "Compiler feedback guides missing declarations, imports, and type information.",
+        "LLMs provide context rather than directly predicting dependence edges.",
+        "Traditional analysis runs on augmented code; extra-scope results are removed.",
+        "The paper implementation uses Joern with GPT-4o or Claude 3.5 Sonnet."
+      ],
+      "boundary": "Teaching demonstrations use authored examples and deterministic browser logic. They do not run the paper system or reproduce its empirical evaluation.",
+      "sources": [
+        "https://aashishyadavally.github.io/assets/pdf/pub-icse2026-(1).pdf"
+      ],
+      "code": "https://github.com/Billrong2/LAMDA"
+    },
+    {
+      "id": "alignment",
+      "name": "Behavioral Alignment",
+      "title": "On Behavioral Alignment of Model-Code and Human-Code Understandability via Behavioral Proxies",
+      "year": 2026,
+      "venue": "ISSTA 2026",
+      "topic": "HUMANS / BEHAVIORAL PROXIES",
+      "question": "模型觉得好懂的代码，人也会觉得好懂吗？",
+      "paper": "https://arxiv.org/abs/2609.26101",
+      "samples": {
+        "story": "两种读者，同一段代码",
+        "lab": "理解行为观测台",
+        "challenge": "语义一致性配对"
+      },
+      "summary": "This work treats understandability as a relationship between code and its reader, and studies alignment between human judgments and model behavior.",
+      "method_facts": [
+        "P0 is a comprehension-question behavioral proxy.",
+        "P1–P3 use program-intent summaries and semantic self-consistency.",
+        "The study compares multiple LLMs with human-rated understandability across reader groups.",
+        "Alignment is strongest with professional developers; role prompts do not resolve weaker student-group alignment."
+      ],
+      "boundary": "Teaching demonstrations use authored examples and deterministic browser logic. They do not run the paper system or reproduce its empirical evaluation.",
+      "sources": [
+        "https://arxiv.org/abs/2609.26101",
+        "https://personal.utdallas.edu/~tien.n.nguyen/publications.html"
+      ]
+    },
+    {
+      "id": "predex",
+      "name": "PredEx",
+      "title": "Blended Analysis for Predictive Execution",
+      "year": 2025,
+      "venue": "FSE 2025",
+      "topic": "PROGRAM ANALYSIS / EXECUTION",
+      "question": "哪些代码必须执行，哪些信息可以用程序分析缩小范围？",
+      "paper": "https://doi.org/10.1145/3729402",
+      "samples": {
+        "story": "一条执行路径的旅程",
+        "lab": "预测执行轨迹",
+        "challenge": "输出侦探"
+      },
+      "summary": "PredEx combines program analysis with model reasoning to predict Python execution traces.",
+      "method_facts": [
+        "Deterministic control-flow steps use program analysis.",
+        "Uncertain branch decisions use per-variable predictive backward slices.",
+        "Applications include code coverage and runtime-error prediction for complete or incomplete code."
+      ],
+      "boundary": "Teaching demonstrations use authored examples and deterministic browser logic. They do not run the paper system or reproduce its empirical evaluation.",
+      "sources": [
+        "https://aashishyadavally.github.io/assets/pdf/pub-fse2025-(2).pdf"
+      ]
+    },
+    {
+      "id": "safemin",
+      "name": "SAFEMIN",
+      "title": "Large Language Models for Safe Minimization",
+      "year": 2025,
+      "venue": "ICSE 2025",
+      "topic": "CONSTRAINTS / SAFE MINIMIZATION",
+      "question": "怎样删掉冗余约束，同时保留真正导致冲突的核心？",
+      "paper": "https://aashishyadavally.github.io/assets/pdf/pub-icse2025-(2).pdf",
+      "samples": {
+        "story": "删减之前，先验证",
+        "lab": "约束验证工作台",
+        "challenge": "安全删减挑战"
+      },
+      "summary": "SAFEMIN pairs LLM proposals with SMT checking to reduce infeasible string-constraint systems while preserving unsatisfiability.",
+      "method_facts": [
+        "The retained subset must remain UNSAT.",
+        "The target is a minimal unsatisfiable subset (MUS).",
+        "A sample-and-enumerate strategy explores multiple MUSes.",
+        "The paper demonstrates infeasible-path detection."
+      ],
+      "boundary": "Teaching demonstrations use authored examples and deterministic browser logic. They do not run the paper system or reproduce its empirical evaluation.",
+      "sources": [
+        "https://aashishyadavally.github.io/assets/pdf/pub-icse2025-(2).pdf"
+      ]
+    }
+  ]
+}

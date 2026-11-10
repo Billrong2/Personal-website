@@ -19,3 +19,7 @@ No recording is included. The interface and looping engine are ready for an audi
 ## Personal and research content
 
 Name, academic affiliation, email, project repositories, and paper links are retained from the user's existing website work. Life and gaming entries deliberately contain only clearly marked placeholders. The fourth world is reserved.
+
+## Research Arcade
+
+The eighteen research samples are original educational implementations. Interaction ideas were selected from paper theatre, experiments, visual graphs and code challenges; no upstream website code, personal writing, datasets or artwork is bundled. Verified paper sources and demo boundaries are listed in `docs/research/catalog.json` and `docs/research/sources.html`. The reference inventory records future adaptation ideas.
