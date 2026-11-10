@@ -4,11 +4,26 @@
 
 把现有 Matrix 科研世界扩展为可以实际操作的论文展示空间。第一轮覆盖目前公开识别的六项 Bill 科研工作，每项提供 **Story / Lab / Challenge 三个独立候选，共 18 个**，供逐项体验、选择和修改。公开识别范围不代表完整履历；未公开工作不在本轮范围。
 
-本轮只扩展科研内容。生活世界、游戏世界及第四个保留入口不纳入内容改造。所有代码和文档写入限定在 `Billrong2/Personal-website`；论文项目仓库和参考网站仅供只读研究，不向它们提交修改。
+内容扩展集中在科研世界。生活世界、游戏世界及第四个保留入口不增加新内容；本轮为首页和全部页面补齐中英切换。所有代码和文档写入限定在 `Billrong2/Personal-website`；论文项目仓库和参考网站仅供只读研究，不向它们提交修改。
 
 ## 当前状态
 
 2026-11-10：六项工作、18 个可交互样例及总览已完成。全部样例通过脚本与主要状态检查；浏览器验证了 18 页加载、六项工作的实验／挑战关键反馈、窄栏比较，以及总览筛选与选择保存。具体范围见 [VALIDATION.md](VALIDATION.md)。GitHub Pages 的启用与线上验收仍待确认。
+
+## 本轮新增：六个独立游戏与全站双语
+
+保留全部 18 个候选，另加入六个具有独立场景与玩法的科研游戏。全站 30 个页面默认英文，可切换中文；选择保存在当前浏览器并同步到比较窗口的内嵌页面。语言切换保留当前交互状态。具体测试与发布状态以 [VALIDATION.md](VALIDATION.md) 为准。
+
+| 工作 | 游戏 | 页面 |
+|---|---|---|
+| CodeSteer | The Current Maze | [attention.html](docs/research/games/attention.html) |
+| AdaptAgent | Contract Courier | [adaptagent.html](docs/research/games/adaptagent.html) |
+| LλMDA | The Missing City | [lamda.html](docs/research/games/lamda.html) |
+| Behavioral Alignment | Mirror District | [alignment.html](docs/research/games/alignment.html) |
+| PredEx | The Execution Express | [predex.html](docs/research/games/predex.html) |
+| SAFEMIN | The Contradiction Citadel | [safemin.html](docs/research/games/safemin.html) |
+
+这六个游戏是论文概念的教学实现，继续遵循下方的研究结果边界。Faded Light 音频尚未附带，GitHub Pages 线上发布仍未确认。
 
 ## 18 个候选映射
 
@@ -64,8 +79,9 @@
 - [x] 关键方法与来源核对一致；演示数据、预设答案和局限表达清楚。
 - [x] 桌面与约 400px 比较窗下展示和关键操作已检查；使用原生可访问控件并提供减少动态效果样式。
 - [ ] 真机触屏、超宽屏与完整键盘回归留待下一轮。
-- [x] 生活、游戏页面未被本轮功能改造；其他科研项目仓库没有写入。
-- [x] 构建文件包含全部候选。
+- [x] 生活、游戏页面只增加双语支持，未扩展内容或玩法；其他科研项目仓库没有写入。
+- [x] 构建检查包含全部 18 个候选、六个独立游戏及双语资源。
+- [x] 本轮双语和六个独立游戏的代表性浏览器操作已验收，完整逻辑与测试范围见 VALIDATION.md。
 - [ ] GitHub Pages 启用、发布状态和实际可访问地址核验。
 
 ## 下一轮

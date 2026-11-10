@@ -23,3 +23,7 @@ Name, academic affiliation, email, project repositories, and paper links are ret
 ## Research Arcade
 
 The eighteen research samples are original educational implementations. Interaction ideas were selected from paper theatre, experiments, visual graphs and code challenges; no upstream website code, personal writing, datasets or artwork is bundled. Verified paper sources and demo boundaries are listed in `docs/research/catalog.json` and `docs/research/sources.html`. The reference inventory records future adaptation ideas.
+
+## Research game worlds and localization
+
+The six bespoke games (The Current Maze, Contract Courier, The Missing City, Mirror District, The Execution Express and Contradiction Citadel), their canvas scenes, sprites, and EN/ZH translations are original implementations in this repository. They add to the eighteen earlier candidates. Paper links are scholarly references; the games use authored educational examples rather than real model measurements.

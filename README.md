@@ -2,7 +2,13 @@
 
 Xiaokai (Bill) Rong 的个人网站：生活、科研、游戏，以及一个尚未命名的入口。
 
-项目目标与后续进度记录在 [Issue #1](https://github.com/Billrong2/Personal-website/issues/1)。当前科研部分加入六项工作的交互候选画廊，每项工作各有三种体验，共 18 个本地样例；选定方向后再逐个完善。
+项目目标与后续进度记录在 [Issue #1](https://github.com/Billrong2/Personal-website/issues/1)。当前科研部分包含六项工作的独立科研游戏，以及原有每项三个候选、共 18 个样例。六个游戏各有自己的场景与玩法，18 个候选继续保留，便于逐篇比较和修改。
+
+## 中英切换
+
+网站全部 30 个页面提供 **EN / 中文** 切换，首次打开默认英文。语言选择保存在当前浏览器，跨页保留，并同步到候选比较窗口中的内嵌页面。切换语言不重置正在进行的故事、实验或挑战。代码标识符、论文正式名称和部分专有名词保持原文。
+
+共享逻辑在 `docs/i18n.js`；首页与三个世界使用 `docs/worlds-translations.js`，科研总览和来源页使用 `docs/research/translations.js`，每项工作的原有候选有自己的 `translations.js`。独立游戏也支持同一语言选择。
 
 ## GitHub Pages
 
@@ -24,10 +30,10 @@ python -m http.server 8000 --directory docs
 
 运行 `python build.py`，生成两个完整压缩包：
 
-- `artifacts/personal-website-static.zip`：完整静态站点。解压后打开 `personal-website/index.html`；也可以在该目录运行 `python -m http.server 8000`，以获得和线上一致的访问方式。保留目录结构，首页、三个世界、科研画廊及 18 个样例即可互相访问。
+- `artifacts/personal-website-static.zip`：完整静态站点。解压后打开 `personal-website/index.html`；也可以在该目录运行 `python -m http.server 8000`，以获得和线上一致的访问方式。保留目录结构，首页、三个世界、科研画廊、六个独立游戏及 18 个样例即可互相访问。
 - `artifacts/personal-website-source.zip`：可编辑的 `docs/`、README、素材说明、打包脚本及忽略规则。
 
-打包前会检查三个世界、科研画廊及全部 18 个样例是否齐全。当前交付使用完整静态文件包，不再生成只包含三个世界的旧版单文件 HTML。`artifacts/` 与 `qa-*` 检查页面不进入站点源码包。
+打包前会检查三个世界、科研画廊、全部 18 个样例、六个独立游戏及必要的中英切换资源是否齐全。当前交付使用完整静态文件包，不再生成只包含三个世界的旧版单文件 HTML。`artifacts/` 与 `qa-*` 检查页面不进入站点源码包。
 
 ## 四个入口
 
@@ -37,6 +43,21 @@ python -m http.server 8000 --directory docs
 - **未命名**：保留第四个位置，尚未启用。
 
 总首页以蓝紫和玫红为主色，保留像素雨城与屋顶小人。各世界提供动态开关并尊重系统减少动态效果的偏好。
+
+## 六个独立科研游戏
+
+入口为 `docs/research/index.html`，游戏文件位于 `docs/research/games/`。这些属于科研世界，独立于生活与游戏世界的预留内容。
+
+| 工作 | 独立游戏 | 页面 |
+| --- | --- | --- |
+| CodeSteer | The Current Maze | `attention.html` |
+| AdaptAgent | Contract Courier | `adaptagent.html` |
+| LλMDA | The Missing City | `lamda.html` |
+| Behavioral Alignment | Mirror District | `alignment.html` |
+| PredEx | The Execution Express | `predex.html` |
+| SAFEMIN | The Contradiction Citadel | `safemin.html` |
+
+这些是用原创场景和可操作规则解释论文问题的教学游戏，不调用真实 LLM，也不把游戏得分当作论文实验指标。CodeSteer 的脚本和样式分别为 `attention.js`、`attention.css`。
 
 ## 科研画廊与 18 个样例
 
@@ -65,7 +86,11 @@ python -m http.server 8000 --directory docs
 
 - `docs/index.html`：四世界总首页。
 - `docs/worlds/{life,research,play}.html`：三个独立风格的世界。
-- `docs/research/index.html`：六项工作、18 个交互候选的画廊。
+- `docs/research/index.html`：六个独立游戏与 18 个交互候选的总览。
+- `docs/research/games/`：六个独立科研游戏。
+- `docs/research/games-catalog.js`：游戏入口与简介。
+- `docs/i18n.js`：默认英文、持久化选择和跨页面／比较窗口语言同步。
+- `docs/worlds-translations.js`、`docs/research/translations.js`、各候选目录的 `translations.js`：双语文案。
 - `docs/research/catalog.js`：研究条目与候选名称。
 - `docs/research/gallery.css`、`gallery.js`：画廊样式与选择交互。
 - `docs/research/samples/`：18 个可独立访问的样例页面。

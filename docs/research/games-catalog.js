@@ -1,0 +1,13 @@
+(() => {
+const games=[
+['attention','CodeSteer','The Current Maze','电流迷宫','Walk a third-person token city. Rewire structural currents, clear the noise, and reveal the computation.','以第三人称探索 token 城市，重接结构电流，消除干扰，看清程序的计算。','EXPLORE / REWIRE / REVEAL','探索 / 接线 / 揭示'],
+['adaptagent','AdaptAgent','Contract Courier','契约快递','Assemble a patch in a neon factory. Install context modules, pass real checks, and deliver across the bridge.','在霓虹工厂里组装补丁，安装上下文模块，通过验证，把补丁送过桥。','BUILD / VERIFY / DELIVER','组装 / 验证 / 派送'],
+['lamda','LλMDA','The Missing City','缺失之城','Restore context pillars among floating ruins. Wire dependencies, cross the route, and project back to the original code.','修复浮空遗迹中的上下文支柱，连接依赖，走过通路，再投影回原代码。','RESTORE / CONNECT / CROSS','重建 / 连线 / 穿越'],
+['alignment','Behavioral Alignment','Mirror District','语义镜城','Carry meaning through neon streets. Route matching signals, then discover why agreement can still be wrong.','让含义穿过霓虹街道，接通语义相同的信号，再发现：一致也可能是错的。','ROUTE / COMPARE / VERIFY','布线 / 对照 / 验证'],
+['predex','PredEx','The Execution Express','执行特快','Operate a data railway. Set the turnout, carry variable state through each branch, and rewind your decisions.','驾驶数据列车，拨动道岔，让变量状态经过每个分支，还能倒带重走。','SWITCH / EXECUTE / REWIND','切轨 / 执行 / 倒带'],
+['safemin','SAFEMIN','Contradiction Citadel','矛盾堡垒','Dismantle a fortress of constraints. Keep its contradiction alive while counterexamples reject unsafe removals.','拆解由约束构成的堡垒，保留矛盾核心，让反例拦下不安全的删除。','DISMANTLE / CHECK / PRESERVE','拆解 / 检查 / 保留']
+];
+window.BillI18n.register({strings:[['./ SIX PAPERS. SIX WORLDS.','./ 六篇论文，六个世界。'],['Each paper has its own playable world. The original eighteen candidates remain below.','每篇论文都有自己的可玩世界。原来的十八个候选仍保留在下方。'],['Enter world →','进入世界 →'],['Game worlds','游戏世界'],['GAME WORLDS','专属游戏世界'],['ORIGINAL CANDIDATES','原有候选'],['Six research works. Six playable worlds.','六项科研工作，六个可玩的世界。'],['Explore, repair, connect, and discover the idea from inside.','亲自探索、修复与连接，从世界内部理解论文的想法。'],['./ COMPARE THE ORIGINAL CANDIDATES','./ 比较原有候选方案'],['Explore this paper’s game world →','探索这篇论文的游戏世界 →'],...games.flatMap(g=>[[g[2],g[3]],[g[4],g[5]],[g[6],g[7]]])]});
+const host=document.getElementById('game-cards');
+if(host)host.innerHTML=games.map((g,i)=>`<a class="game-card game-${g[0]}" href="games/${g[0]}.html"><div class="game-art" aria-hidden="true"><span class="game-grid"></span><span class="game-core">${['{ λ }','[ ⇢ ]','⋈','◈','⇄','⊥'][i]}</span><i class="arc arc-a"></i><i class="arc arc-b"></i><i class="arc arc-c"></i><span class="game-index">0${i+1}</span></div><div class="game-card-body"><span class="game-paper">${g[1]}</span><h3>${g[2]}</h3><p>${g[4]}</p><small>${g[6]}</small><strong>Enter world →</strong></div></a>`).join('');
+})();
