@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0e0a1c">
+<meta name="description" content="Xiaokai (Bill) Rong 的个人世界：生活、科研与游戏。">
+<title>四个世界，一个 Bill。 · Xiaokai Rong</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<script src="music.js" defer></script>
+<style>
+:root{color-scheme:dark;--bg:#0e0a1c;--ink:#f5edf9;--accent:#d59bff;--muted:#b3a2c6;--pink:#ff82c6;--line:#49335f;--pixel:'Pixel','JetBrains Mono',monospace;--mono:'JetBrains Mono',monospace;--body:'Inter',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--pink);outline-offset:7px}::selection{background:#bfbbf5;color:#0e0a1c}.skip{position:absolute;top:-80px;left:20px;z-index:20;background:var(--accent);color:var(--bg);padding:12px}.skip:focus{top:10px}.topbar{position:absolute;z-index:8;inset:0 0 auto;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid #d6a4ef24;font:10px var(--mono);letter-spacing:.05em}.brand{font:16px var(--pixel);letter-spacing:0}.brand b{color:var(--accent);font-weight:400}.top-links{display:flex;gap:31px;align-items:center}.top-links a{padding:12px 0;color:#c6b4d5}.top-links a:hover{color:var(--pink)}.scene-switch{border:1px solid #735782;background:#1c1231e0;padding:10px 13px;font:9px var(--mono);display:flex;align-items:center;gap:8px}.signal{width:5px;height:5px;background:var(--accent);box-shadow:0 0 7px #e2a8ff}.scene-switch[aria-pressed=false] .signal{background:#645a93;box-shadow:none}.scene-switch[aria-pressed=false]{color:#8d85b5}.hero{position:relative;min-height:850px;height:100svh;max-height:1120px;isolation:isolate;overflow:hidden;background:#100e25}.scene{position:absolute;width:100%;height:100%;inset:0;z-index:-3;image-rendering:pixelated}.scene-vignette{position:absolute;inset:0;pointer-events:none;z-index:-2;background:linear-gradient(90deg,#0c0b20f5 0%,#0c0b20e8 18%,#0c0b2099 42%,#0c0b2000 66%),linear-gradient(0deg,#100b21 0%,#100b2100 23%,#100b211a 80%,#100b2188 100%)}.grain{position:absolute;inset:0;pointer-events:none;z-index:-1;background:repeating-linear-gradient(0deg,transparent 0 3px,#09071b19 3px 4px);opacity:.5}.hero-content{padding:166px 5vw 225px;position:relative;z-index:1;max-width:850px}.eyebrow{font:10px var(--mono);letter-spacing:.18em;color:var(--accent);display:flex;align-items:center;gap:10px;margin:0 0 28px}.eyebrow::before{content:'';width:20px;height:3px;background:var(--pink)}h1{font:clamp(64px,7.3vw,111px)/.93 var(--pixel);letter-spacing:-.065em;margin:0 0 29px;color:#fff1f3;text-shadow:5px 5px #2d2043}h1 span{display:block}h1 .last-name{color:var(--accent);font-size:1.3em;letter-spacing:-.055em;text-shadow:5px 5px #4c2d68,0 0 50px #be6fff18}.intro{font-size:14px;line-height:1.9;color:#cabbd5;max-width:385px;margin:0 0 27px}.intro strong{font-weight:500;color:#fff2ed}.hero-actions{display:flex;gap:14px;align-items:center}.pixel-button{position:relative;display:inline-flex;align-items:center;justify-content:space-between;gap:35px;padding:14px 19px;background:#efa0d5;color:#251034;box-shadow:4px 4px #654082;font:12px var(--pixel);border:0;transition:transform .15s,box-shadow .15s}.pixel-button::before,.pixel-button::after{content:'';position:absolute;width:4px;height:4px;background:#160d26}.pixel-button::before{left:0;top:0}.pixel-button::after{right:0;bottom:0}.pixel-button:hover{transform:translate(-2px,-2px);box-shadow:6px 6px #654082;background:#f5c4ed}.quiet-button{font:10px var(--mono);padding:15px 12px;border-bottom:1px solid #7c678c}.quiet-button:hover{color:var(--pink);border-color:var(--pink)}.location{font:9px var(--mono);letter-spacing:.13em;color:#9c82b3;margin:32px 0 0}.scene-caption{position:absolute;top:68%;right:10%;font:8px var(--mono);letter-spacing:.09em;color:#ddc2ec;background:#21112ed9;padding:8px 12px;border-left:2px solid var(--pink)}.scene-caption span{color:var(--pink)}.work-dock{position:absolute;left:5vw;right:5vw;bottom:49px;z-index:3}.dock-label{display:flex;justify-content:space-between;align-items:center;margin:0 0 13px;font:9px var(--mono);letter-spacing:.11em;color:#c0a0d0}.dock-label small{font:8px var(--mono);letter-spacing:0;color:#9774ae}.dock-grid{display:grid;grid-template-columns:repeat(3,1fr);background:#150d27ef;border:1px solid #5a3b71;box-shadow:5px 5px #090613}.project{padding:20px 24px;display:grid;grid-template-columns:24px 1fr 14px;gap:15px;align-items:center;transition:background .18s}.project+.project{border-left:1px solid #5a3b71}.project:hover{background:#362044}.project-number{font:10px var(--mono);color:#b686ce;align-self:start;padding-top:4px}.project h2{font:15px var(--pixel);letter-spacing:-.03em;margin:0 0 8px;color:#eee1fa}.project p{font:9px/1.6 var(--mono);margin:0;color:#b29cc4}.project .arrow{color:var(--pink);font:17px var(--mono)}.bottom-line{position:absolute;bottom:14px;left:5vw;right:5vw;display:flex;justify-content:space-between;font:8px var(--mono);letter-spacing:.09em;color:#655a93}.scroll-cue{color:#a3a4c6}.research{max-width:1296px;margin:auto;padding:90px 5vw 70px;display:grid;grid-template-columns:1fr 1.15fr;gap:10%;border-bottom:1px solid #2f284c}.section-eyebrow{font:10px var(--mono);color:var(--pink);letter-spacing:.1em;margin:0 0 20px}.research h2{font:30px/1.2 var(--pixel);letter-spacing:-.05em;margin:0 0 24px;max-width:440px}.research .about-text{color:#978fba;font-size:13px;line-height:1.9;max-width:420px}.about-text a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}.paper-list{list-style:none;padding:0;margin:0}.paper-list li{border-top:1px solid #363054;padding:20px 0}.paper-list li:last-child{border-bottom:1px solid #363054}.paper-list a{display:block}.venue{font:9px var(--mono);color:var(--accent);letter-spacing:.08em;display:block;margin-bottom:12px}.paper-name{font-size:13px;line-height:1.75;display:block;color:#cbcce5}.paper-list a:hover .paper-name{color:var(--pink)}footer{max-width:1296px;padding:30px 5vw 38px;display:flex;align-items:center;justify-content:space-between;margin:auto;font:9px var(--mono);color:#766ca5}footer a{color:var(--accent)}footer a:hover{color:var(--pink)}.footer-links{display:flex;gap:24px}
+@media(min-width:1600px){.hero-content{padding-top:19vh}.work-dock{bottom:65px}.scene-caption{top:68%;right:12%}}
+@media(max-height:850px) and (min-width:800px){.hero{min-height:800px}.hero-content{padding-top:143px}.hero-content h1{font-size:88px}.eyebrow{margin-bottom:24px}.intro{margin-bottom:22px}.location{margin-top:25px}}
+@media(max-width:1000px){.top-links{gap:20px}.hero-content{max-width:680px}h1{font-size:86px}.project{padding:19px 17px;grid-template-columns:18px 1fr 10px;gap:7px}.project h2{font-size:12px}.project p{font-size:8px}.scene-caption{right:7%;top:69%}.research{gap:6%}}
+@media(max-width:700px){.topbar{padding:0 22px;height:76px}.brand{font-size:14px}.top-links{gap:18px}.top-links>a{display:none}.scene-switch{font-size:8px;padding:9px}.hero{height:auto;min-height:980px;max-height:none}.hero-content{padding:133px 24px 0;max-width:100%}.eyebrow{font-size:8px;letter-spacing:.11em;margin-bottom:24px;gap:8px}.eyebrow:before{width:14px}h1{font-size:clamp(49px,11.8vw,80px);line-height:1.04;margin-bottom:23px}.intro{font-size:12px;max-width:320px;line-height:1.9;margin-bottom:25px}.hero-actions{gap:14px}.pixel-button{font-size:10px;padding:13px 15px;gap:23px}.quiet-button{font-size:9px;padding:13px 6px}.location{font-size:8px;letter-spacing:.04em;margin-top:22px}.scene-vignette{background:linear-gradient(180deg,#100b22b3 0%,#100b22ad 29%,#100b2233 50%,#100b2200 65%,#100b21eb 79%,#100b21 100%),linear-gradient(90deg,#0c0b20b5,#0c0b2015)}.scene-caption{top:644px;right:25px;font-size:7px;padding:6px 9px}.work-dock{left:24px;right:24px;bottom:50px}.dock-label{font-size:8px;margin-bottom:12px}.dock-label small{font-size:7px}.dock-grid{grid-template-columns:1fr}.project{padding:14px 15px;grid-template-columns:22px 1fr 15px;gap:10px}.project+.project{border-left:0;border-top:1px solid #363054}.project h2{font-size:12px;margin-bottom:5px}.project p{font-size:8px}.project-number{padding-top:2px}.bottom-line{left:24px;right:24px;bottom:16px;font-size:7px;letter-spacing:0}.research{display:block;padding:60px 24px 45px}.research h2{font-size:27px}.research .about-text{font-size:12px;margin-bottom:36px}.paper-name{font-size:12px}footer{padding:25px 24px 30px;font-size:8px;gap:24px;align-items:flex-start}.footer-links{flex-direction:column;gap:12px;text-align:right}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Four worlds, one person. The city stays the same; the entrances belong to Bill. */
+:root{--body:'Inter','Noto Sans CJK SC','Microsoft YaHei',system-ui,sans-serif}
+.top-links .nav-world{border:0;background:none;padding:12px 0;font:11px var(--body);color:#c6b4d5;letter-spacing:.12em}.top-links .nav-world:hover{color:var(--pink)}
+.hero-content{max-width:760px;padding-top:174px}.eyebrow{font-size:9px;letter-spacing:.16em;margin-bottom:27px}.hero-content h1{font:600 clamp(56px,5.4vw,84px)/1.2 var(--body);letter-spacing:-.055em;text-shadow:3px 4px #241537;margin-bottom:27px}.hero-content h1 .last-name{font-size:1em;letter-spacing:-.055em;color:#f6eaf8;text-shadow:3px 4px #241537}.hero-content h1 b{font:1.03em var(--pixel);font-weight:400;color:var(--accent);text-shadow:5px 5px #503166,0 0 40px #d59bff14}.hero-content h1 .punctuation{display:inline;color:#ed8ec5}.intro{font-size:13px;max-width:355px;line-height:2.05;color:#c7b7d4}.hero-actions .pixel-button{font:11px var(--body);letter-spacing:.08em;gap:30px;font-weight:550}.location{font-size:9px;letter-spacing:.04em;color:#a28db7;margin-top:27px}.dock-grid{grid-template-columns:repeat(4,1fr)}.world{--world-color:#d59bff;display:grid;grid-template-columns:32px 1fr 12px;gap:15px;align-items:center;text-align:left;border:0;border-radius:0;background:transparent;color:var(--ink);padding:23px 21px;min-width:0;position:relative;transition:background .18s}.world+.world{border-left:1px solid #5a3b71}.world:hover{background:#281a3e}.world::before{content:'';position:absolute;top:-1px;left:21px;width:29px;height:2px;background:var(--world-color);box-shadow:0 0 12px color-mix(in srgb,var(--world-color) 25%,transparent)}.world-life{--world-color:#ffc18b}.world-play{--world-color:#ff8ac8}.world-icon{width:29px;height:29px;fill:currentColor;color:var(--world-color);shape-rendering:crispEdges}.world-title{display:flex;align-items:baseline;gap:9px;font-size:19px;font-weight:500;letter-spacing:.09em;margin-bottom:7px}.world-title small{font:8px var(--mono);color:var(--world-color);letter-spacing:.07em}.world-sub{display:block;font:9px var(--body);color:#ad96bf;letter-spacing:.03em;white-space:nowrap}.world-arrow{font-size:17px;color:var(--world-color)}.world[disabled]{--world-color:#7b658c;cursor:default;background:#110b20;color:#9f8cad}.world[disabled]:hover{background:#110b20}.world[disabled] .world-sub{color:#756585}.world[disabled] .world-icon{opacity:.65}.world[disabled] .world-title{font-size:17px}.world[disabled] .world-title small{font-size:7px}.dock-label{color:#c5a9d6}.dock-label>span{font:10px var(--body);letter-spacing:.12em}.research h2{font-family:var(--body);font-weight:500;line-height:1.35;letter-spacing:-.03em;font-size:32px}.research h2 span{font:18px var(--pixel);color:#d7b3e9;display:block;margin-top:12px}.research .about-text{color:#b5a2c7}.research-projects{border-top:1px solid #443054;margin-top:25px;max-width:440px}.research-projects a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid #443054;font:11px var(--mono);color:#dbc2eb}.research-projects a:hover{color:#ffb9df}.research-projects a span{color:#a482bd;font-size:9px}.world-modal{width:min(530px,calc(100% - 36px));max-height:85dvh;padding:0;background:#160f27;color:#f5edf9;border:1px solid #80559d;box-shadow:7px 7px #070411,0 0 80px #714bb22b}.world-modal::backdrop{background:#080613c9;backdrop-filter:blur(7px)}.world-windowbar{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:13px 18px;background:#21152f;border-bottom:1px solid #4b315f;font:9px var(--mono);letter-spacing:.08em;color:#bb93d3}.world-close{border:0;background:transparent;color:#e8caf5;width:28px;height:28px;font-size:23px;line-height:1}.world-close:hover{color:#ff8ac8}.world-window{padding:34px}.world-window .world-icon{width:45px;height:45px;margin-bottom:22px}.world-window h2{font:500 32px var(--body);letter-spacing:.1em;margin:0 0 9px}.world-window .world-en{font:10px var(--pixel);color:var(--world-color);margin:0 0 27px}.world-window p{font:12px/2 var(--body);color:#bea9cd;margin:0 0 17px}.world-window .world-tags{border-top:1px solid #49335c;margin:25px 0 0;padding-top:20px;color:#e3c6ee;font:11px var(--body);letter-spacing:.1em}.world-window .world-pending{display:inline-flex;gap:8px;align-items:center;font:9px var(--mono);color:#a089b2;margin:22px 0 0}.world-pending::before{content:'';width:5px;height:5px;background:var(--world-color)}.music-wrap{position:relative;display:flex;align-items:center;gap:10px;margin-left:auto}.music-toggle{background:transparent;border:1px solid #49335f;padding:7px 9px;font:8px var(--mono);color:#b79bc8}.music-toggle[aria-pressed=true]{color:#edabe9;border-color:#ac6dae}.music-settings summary{cursor:pointer;font-size:8px;color:#b79bc8;padding:7px 0;list-style:none}.music-settings summary::-webkit-details-marker{display:none}.music-popover{position:absolute;right:0;bottom:calc(100% + 12px);width:230px;background:#160f27;border:1px solid #604076;box-shadow:4px 4px #080411;padding:18px;color:#c4a8d4}.music-popover p{font:10px/1.8 var(--body);margin:0 0 12px}.music-popover strong{color:#efd7fa}.music-volume-line{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:9px;margin-bottom:8px}#music-volume{accent-color:#d59bff;width:100%;margin:0 0 9px}.music-popover #music-status{font-size:9px;margin:0;color:#927ba4}.footer-links{margin-left:20px}.footer-id{line-height:1.8}.footer-id span{color:#a187b6;font-size:8px}.footer-id .footer-note{color:#7d648f;font-size:8px;margin-top:8px}
+@media(max-height:850px) and (min-width:800px){.hero-content{padding-top:145px}.hero-content h1{font-size:67px}.scene-caption{top:66%}}
+@media(max-width:1100px){.world{padding:20px 14px;gap:9px;grid-template-columns:25px 1fr 10px}.world::before{left:14px}.world-icon{width:24px;height:24px}.world-title{font-size:17px;gap:6px}.world-title small{font-size:7px}.world-sub{font-size:8px}.world[disabled] .world-title{font-size:16px}.world[disabled] .world-title small{font-size:6px}}
+@media(max-width:700px){.top-links{gap:12px}.top-links .nav-world{display:none}.topbar{padding:0 22px}.hero{min-height:1000px}.hero-content{padding:132px 24px 0}.hero-content h1{font-size:clamp(43px,10.6vw,64px);line-height:1.25;letter-spacing:-.055em;margin-bottom:23px}.hero-content h1 b{font-size:1.03em}.eyebrow{font-size:7px;letter-spacing:.075em;gap:7px}.eyebrow::before{width:13px}.intro{font-size:11px;max-width:286px;line-height:2}.location{font-size:8px;margin-top:22px}.hero-actions .pixel-button{font-size:10px;padding:13px 15px;gap:20px}.dock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.work-dock{left:24px;right:24px;bottom:51px}.world{padding:17px 12px;min-height:92px;grid-template-columns:22px 1fr;gap:10px}.world:nth-child(3){border-left:0}.world:nth-child(n+3){border-top:1px solid #5a3b71}.world::before{left:13px;width:21px}.world-title{display:block;font-size:17px;line-height:1.25;margin-bottom:6px}.world-title small{display:block;margin-top:6px;font-size:7px;letter-spacing:.08em}.world-sub{display:none}.world-arrow{display:none}.world-icon{width:22px;height:22px}.world[disabled] .world-title{font-size:16px}.world[disabled] .world-title small{font-size:7px}.dock-label{margin-bottom:14px}.dock-label>span{font-size:9px}.dock-label small{font-size:7px}.scene-caption{top:653px;right:25px}.research h2{font-size:28px}.research h2 span{font-size:17px}.research-projects{margin-bottom:38px}.research-projects a{font-size:10px}.research-projects a span{font-size:8px}footer{flex-wrap:wrap;gap:20px}.footer-links{margin-left:auto;gap:12px}.music-wrap{order:3;width:100%;margin:0;padding-top:18px;border-top:1px solid #392447}.music-popover{left:0;right:auto}.world-window{padding:28px}.world-window h2{font-size:28px}.world-window p{font-size:11px}.world-window .world-tags{font-size:10px}}
+@media(max-width:350px){.hero-content{padding-left:20px;padding-right:20px}.hero-content h1{font-size:41px}.eyebrow{font-size:6px;letter-spacing:.04em}.intro{font-size:10px}.hero-actions{gap:8px}.hero-actions .pixel-button{font-size:9px}.quiet-button{font-size:8px}.work-dock{left:20px;right:20px}.world{gap:8px;padding:17px 10px}.world-title{font-size:16px}.world[disabled] .world-title{font-size:15px}.dock-label small{font-size:6px}.scene-caption{right:20px}.topbar{padding:0 20px}.brand{font-size:13px}.research{padding-left:20px;padding-right:20px}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><a class="brand" href="#main">BILL<span aria-hidden="true">.</span><b>WORLD</b></a><nav class="top-links" aria-label="世界导航"><a class="nav-world" href="worlds/life.html">生活</a><a href="worlds/research.html" class="nav-world">科研</a><a class="nav-world" href="worlds/play.html">游戏</a><button id="scene-toggle" class="scene-switch" type="button" aria-pressed="true" aria-label="Pause city animation"><i class="signal" aria-hidden="true"></i><span id="scene-label">SCENE ON</span></button></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<canvas id="city" class="scene" aria-hidden="true"></canvas><div class="scene-vignette"></div><div class="grain"></div>
+<div class="hero-content"><p class="eyebrow">XIAOKAI (BILL) RONG / A PERSONAL UNIVERSE</p><h1 id="hero-title"><span>四个世界，</span><span class="last-name">一个 <b>Bill</b><span class="punctuation">。</span></span></h1><p class="intro">你好，我是 <strong>Bill</strong>。<br>在生活里收集片段，在科研里追问答案，<br>也会去游戏里的另一个世界，走走看看。</p><div class="hero-actions"><a class="pixel-button" href="#worlds">选一个世界，进来坐坐 <span aria-hidden="true">↘</span></a><a class="quiet-button" href="mailto:rxkbill@gmail.com">Say hello ↗</a></div><p class="location">DALLAS, TEXAS &nbsp; / &nbsp; FOUR WORLDS. ONE BILL.</p></div>
+<div class="scene-caption"><span>↳</span> THE HUMAN IN THE LOOP</div>
+<section class="work-dock" id="worlds" aria-labelledby="worlds-title"><div class="dock-label"><span id="worlds-title">选择一扇门</span><small>FOUR WORLDS / ONE BILL</small></div><div class="dock-grid"><a class="world world-life" href="worlds/life.html"><svg class="world-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h2v4H7zm6 1h2v4h-2zm6-1h2v4h-2zM4 11h20v4h6v10h-8v3H7v-3H4zm20 7v4h3v-4zM2 29h25v3H2z"/></svg><span><span class="world-title">生活 <small>01 / LIFE</small></span><span class="world-sub">日常、旅行与随手记</span></span><span class="world-arrow" aria-hidden="true">↗</span></a><a class="world" href="worlds/research.html"><svg class="world-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 3h28v21H19v4h7v3H6v-3h7v-4H2zm3 3v15h22V6zm3 3h3v3h3v3h-3v3H8v-3h3v-3H8zm9 7h7v2h-7z"/></svg><span><span class="world-title">科研 <small>02 / RESEARCH</small></span><span class="world-sub">问题、想法与探索</span></span><span class="world-arrow" aria-hidden="true">↗</span></a><a class="world world-play" href="worlds/play.html"><svg class="world-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 8h18v3h4v4h2v13h-7v-3H8v3H1V15h2v-4h4zm1 5v3H5v3h3v3h3v-3h3v-3h-3v-3zm14 0v4h4v-4zm-4 7v4h4v-4z"/></svg><span><span class="world-title">游戏 <small>03 / PLAY</small></span><span class="world-sub">角色、冒险与新世界</span></span><span class="world-arrow" aria-hidden="true">↗</span></a><button class="world" type="button" disabled aria-label="第四个世界，未命名，暂时保留"><svg class="world-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h18v3h3v9h-3v3h-6v5h-6v-8h6v-3h3V9H10v3H4V6h3zm6 24h6v5h-6z"/></svg><span><span class="world-title">未命名 <small>04 / UNNAMED</small></span><span class="world-sub">先留一个位置</span></span><span class="world-arrow" aria-hidden="true">·</span></button></div></section>
+<div class="bottom-line"><span>PERSONAL SPACE / XIAOKAI RONG</span><a class="scroll-cue" href="#worlds">CHOOSE YOUR WORLD ↗</a></div>
+</section>
+</main><footer><div class="footer-id">© 2026 XIAOKAI RONG<br><span>Xiaokai (Bill) Rong · UT Dallas</span><div class="footer-note">A SMALL CORNER OF THE INTERNET.</div></div><div class="footer-links"><a href="mailto:rxkbill@gmail.com">rxkbill@gmail.com ↗</a><a href="https://github.com/Billrong2" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="music-wrap"><button id="music-toggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Turn background music on" data-audio-src="" data-loop-start="0" data-loop-end="0" data-crossfade="8"><span id="music-label">Music off</span></button><details id="music-panel" class="music-settings"><summary>音乐设置 ↗</summary><div class="music-popover"><p><strong>Faded Light</strong><br>PYLOT · Original instrumental</p><div class="music-volume-line"><label for="music-volume">Volume</label><output id="music-volume-value" for="music-volume">12%</output></div><input id="music-volume" type="range" min="0" max="100" step="1" value="12" aria-label="Background music volume"><p id="music-status" role="status">音乐文件待接入。</p></div></details></div></footer>
+<script>
+(() => {
+  const canvas = document.getElementById('city');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  const toggle = document.getElementById('scene-toggle');
+  const label = document.getElementById('scene-label');
+  const media = matchMedia('(prefers-reduced-motion: reduce)');
+  let moving = !media.matches;
+  let tick = 0, last = 0, mobile = false;
+  const backdrop = document.createElement('canvas');
+  backdrop.width = 960; backdrop.height = 600;
+  const g = backdrop.getContext('2d');
+  const box = (x,y,w,h,c) => { g.fillStyle=c; g.fillRect(x,y,w,h); };
+  let seed = 1706;
+  const random = () => { seed = (Math.imul(seed,1664525)+1013904223) >>> 0; return seed/4294967296; };
+  function windows(x,y,w,h,stepX,stepY) {
+    for(let yy=y;yy<y+h;yy+=stepY) for(let xx=x;xx<x+w;xx+=stepX) {
+      const v=random(); if(v>.35) box(xx,yy,Math.max(2,stepX-7),2,v>.94?'#ffb87c':v>.81?'#688bd4':'#2b325c');
+    }
+  }
+  function paintCity() {
+    const sky=g.createLinearGradient(0,0,0,600);sky.addColorStop(0,'#0b102b');sky.addColorStop(.6,'#30204c');sky.addColorStop(1,'#100b20');g.fillStyle=sky;g.fillRect(0,0,960,600);
+    // A stepped moon, distant antennae, and low-lit blocks establish scale.
+    box(751,69,29,37,'#c292b9');box(746,75,39,25,'#ffbf97');box(754,65,22,45,'#ffd3a6');box(764,65,15,43,'#bb81a8');
+    for(let i=0;i<35;i++){const x=i*30-10;const h=30+random()*130;box(x,300-h,22+random()*25,h,'#170f2d');if(i%4===0)box(x+8,290-h,2,12,'#231a41');}
+    // Main skyline: deliberately uneven, with narrow illuminated gaps.
+    box(309,196,70,230,'#10192f');windows(319,212,54,200,11,12);box(385,154,58,274,'#191f3d');box(389,149,50,6,'#292047');windows(394,169,41,240,10,11);
+    box(448,191,57,240,'#15142c');box(455,174,42,17,'#130b2a');windows(461,207,35,180,12,10);
+    // The tall violet data tower.
+    box(511,74,109,357,'#211832');box(511,74,6,357,'#60437c');box(520,63,88,11,'#33284a');box(538,51,50,12,'#33284a');box(561,31,2,20,'#564f82');box(563,31,3,2,'#a19fd5');
+    box(529,92,74,147,'#0b051c');box(527,90,78,2,'#ce88f1');box(527,90,2,150,'#8052a1');box(603,90,2,150,'#8052a1');box(527,239,78,2,'#ce88f1');
+    windows(525,257,79,150,14,13);box(513,250,106,3,'#302a50');box(603,251,7,157,'#17102e');
+    for(let y=83;y<409;y+=28){box(616,y,4,3,'#ffb894');box(617,y+3,3,14,'#282049');}
+    // Magenta signs and warm windows illuminate the indigo city.
+    box(475,265,36,71,'#a75b7c');box(478,268,30,65,'#1f1929');g.font='bold 12px monospace';g.fillStyle='#e8a4be';['C','O','D','E'].forEach((s,i)=>g.fillText(s,489,282+i*15));box(477,337,34,3,'#713e55');
+    box(640,177,110,251,'#15142c');box(648,159,95,18,'#1c133b');box(650,150,4,9,'#454069');box(734,147,2,12,'#454069');windows(650,188,89,227,13,14);
+    box(647,205,95,43,'#da81aa');box(650,208,89,37,'#301f2c');box(651,209,87,1,'#f0acc9');g.fillStyle='#f1b9cf';g.font='bold 11px monospace';g.fillText('READ THE',659,224);g.fillText('SOURCE.',661,238);box(657,249,2,16,'#4c3f3b');box(732,249,2,16,'#4c3f3b');
+    box(767,229,47,207,'#11082b');windows(774,239,36,150,12,12);
+    // Right tower with exposed lift shaft and thin periwinkle edge lighting.
+    box(829,40,124,397,'#100a22');box(829,40,5,397,'#38305d');box(833,44,2,390,'#a6a7ff');box(950,41,3,395,'#281f4c');box(850,28,87,13,'#181133');windows(843,55,92,325,15,14);
+    box(886,115,54,87,'#0b041f');box(883,112,60,3,'#b786df');box(883,202,60,3,'#b786df');box(883,115,3,87,'#2f265e');box(940,115,3,87,'#2f265e');
+    // Bridges, cables, and subdued city haze.
+    box(616,278,27,5,'#47426c');box(618,283,24,8,'#1e173c');box(749,317,81,4,'#48426c');box(749,321,81,10,'#191234');
+    g.strokeStyle='#4d4671';g.lineWidth=1;g.beginPath();g.moveTo(609,165);g.quadraticCurveTo(681,211,771,200);g.stroke();g.beginPath();g.moveTo(742,146);g.quadraticCurveTo(808,180,850,127);g.stroke();
+    box(0,373,960,70,'#130b2d77');
+    // Foreground rooftop: individual bricks, pipes, bench and luminous monitor.
+    box(620,411,340,189,'#0a0717');box(612,405,348,8,'#302a4f');box(612,402,348,3,'#6966a1');box(626,416,334,5,'#1c163e');
+    for(let y=425;y<580;y+=18)for(let x=623+(y%36?0:20);x<960;x+=44){box(x,y,39,1,'#1c1635');box(x+40,y,1,17,'#171131');}
+    box(884,369,14,33,'#2f2a4a');box(881,363,20,6,'#3d3b60');box(889,349,4,14,'#58588f');box(932,382,19,20,'#292348');box(929,378,25,4,'#494875');
+    box(662,383,65,5,'#7b7960');box(668,388,4,14,'#46426c');box(715,388,4,14,'#46426c');box(678,357,32,24,'#534c7d');box(681,360,26,17,'#ffc397');box(683,362,22,13,'#352044');box(691,381,6,3,'#6a6da3');box(674,380,42,3,'#343151');
+    g.fillStyle='#ffcbab';g.font='6px monospace';g.fillText('> hello',684,368);g.fillText('  world_',684,374);
+    box(643,377,10,24,'#6c6651');box(640,374,16,5,'#9c9272');box(647,358,3,17,'#57568c');box(640,361,7,6,'#424274');box(650,365,9,5,'#6465aa');box(645,353,7,8,'#53559b');
+    // Quiet pools of reflected sign-light.
+    box(675,405,43,1,'#8587b4');box(734,405,41,1,'#dc9bb6');box(832,407,42,1,'#928ac4');
+  }
+  paintCity();
+  const sprite = [
+    '       HHHHHH       ',
+    '      HHhhhhHH      ',
+    '      HhhhhhhhH     ',
+    '      HhssssssH     ',
+    '      HsssssssH     ',
+    '       ssessss      ',
+    '       sssssss      ',
+    '        ssss        ',
+    '      PPPssPPP      ',
+    '     PpppppppPP     ',
+    '    PpppppppppPB    ',
+    '    PpppppppppPBB   ',
+    '    PpppppppppPBB   ',
+    '    PpppppppppPBB   ',
+    '    PpppppppppPBB   ',
+    '    sPppppppppPBB   ',
+    '    ssPpppppppPB    ',
+    '      PpppppppP     ',
+    '      PPPPPPPPP     ',
+    '      DDDDDDDDD     ',
+    '      DDDD DDDD     ',
+    '      DDDD DDDD     ',
+    '      dDDD dDDD     ',
+    '      dDDD dDDD     ',
+    '      dDDD dDDD     ',
+    '     TTTDD TTTDD    ',
+    '     TTTTT TTTTT    '
+  ];
+  const colors={H:'#211d30',h:'#3b385c',s:'#d0b290',e:'#2b2840',P:'#915779',p:'#ef97c2',B:'#817eb0',D:'#1d163b',d:'#302a52',T:'#d9d2ee'};
+  const drops=Array.from({length:90},()=>({x:random()*1100,y:random()*650,l:4+random()*12,s:1.5+random()*2.5}));
+  const glyphs='01<>/{}[]λ';
+  function paintHuman(x,y) {
+    sprite.forEach((row,yy)=>{for(let xx=0;xx<row.length;xx++){const c=colors[row[xx]];if(c){ctx.fillStyle=c;ctx.fillRect(x+xx*2,y+yy*2,2,2);}}});
+    // Small rooftop cat, seated with one raised tail.
+    ctx.fillStyle='#1c1730';ctx.fillRect(799,389,14,13);ctx.fillRect(800,384,10,9);ctx.fillRect(800,381,3,5);ctx.fillRect(807,381,3,5);ctx.fillRect(813,393,3,7);ctx.fillRect(815,388,3,9);ctx.fillStyle='#ffcc92';ctx.fillRect(801,387,2,1);ctx.fillRect(807,387,2,1);
+  }
+  function draw() {
+    const w=canvas.width,h=canvas.height;
+    ctx.clearRect(0,0,w,h);ctx.save();
+    if(mobile){const scale=h/600;ctx.scale(scale,scale);ctx.translate(-558,0);}else ctx.scale(w/960,h/600);
+    ctx.drawImage(backdrop,0,0);
+    ctx.font='7px monospace';
+    for(let col=0;col<9;col++)for(let row=0;row<19;row++){
+      const pos=(row+Math.floor(tick/9)+col*3)%19;ctx.fillStyle=pos===0?'#ffe7ff':pos<5?'#c58df2':'#5c3e86';
+      ctx.fillText(glyphs[(col*7+row*3+Math.floor(tick/25))%glyphs.length],534+col*7,103+row*7);
+    }
+    for(let col=0;col<6;col++)for(let row=0;row<11;row++){
+      ctx.fillStyle=(col+row+Math.floor(tick/10))%11<2?'#ffc1e5':'#8950a5';ctx.fillText(glyphs[(col+row*4+Math.floor(tick/30))%glyphs.length],890+col*8,124+row*7);
+    }
+    paintHuman(738,348+(moving&&Math.floor(tick/16)%2?1:0));
+    // The rain is drawn in short pixel strokes, at a restrained frame rate.
+    ctx.fillStyle='#a1a8ff3e';
+    for(const d of drops){const yy=(d.y+tick*d.s)%630;const xx=d.x-yy*.13;ctx.fillRect(Math.round(xx),Math.round(yy),1,d.l);}
+    for(let n=0;n<13;n++){const x=630+n*27;const phase=(tick+n*7)%30;if(phase<7){ctx.fillStyle='#d7a1ee40';ctx.fillRect(x,403,3+Math.floor(phase/3)*2,1);}}
+    ctx.restore();
+  }
+  function resize(){mobile=innerWidth<=700;canvas.width=Math.max(300,Math.round(canvas.clientWidth/1.7));canvas.height=Math.max(480,Math.round(canvas.clientHeight/1.7));draw();}
+  function state(){toggle.setAttribute('aria-pressed',String(moving));toggle.setAttribute('aria-label',moving?'Pause city animation':'Resume city animation');label.textContent=moving?'SCENE ON':'SCENE PAUSED';draw();}
+  toggle.addEventListener('click',()=>{moving=!moving;state();});
+  media.addEventListener('change',e=>{moving=!e.matches;state();});
+  addEventListener('resize',resize,{passive:true});
+  function frame(time){if(moving&&!document.hidden&&time-last>80){tick++;last=time;draw();}requestAnimationFrame(frame);}
+  resize();state();requestAnimationFrame(frame);
+})();
+</script>
+
+
+</body></html>
