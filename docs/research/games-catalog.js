@@ -1,6 +1,6 @@
 (() => {
 const games=[
-['attention','CodeSteer','The Current Maze','电流迷宫','Walk a third-person token city. Rewire structural currents, clear the noise, and reveal the computation.','以第三人称探索 token 城市，重接结构电流，消除干扰，看清程序的计算。','EXPLORE / REWIRE / REVEAL','探索 / 接线 / 揭示'],
+['attention','CodeSteer','Code Steer','Code Steer','Enter the maze behind the paper. Probe obfuscated nodes, bind observed values, and patch your own backward slice.','走进论文里的迷宫，检查混淆节点、绑定观察值，亲手连接并验证反向切片。','PROBE / PATCH / VERIFY','检查 / 接线 / 验证'],
 ['adaptagent','AdaptAgent','Contract Courier','契约快递','Assemble a patch in a neon factory. Install context modules, pass real checks, and deliver across the bridge.','在霓虹工厂里组装补丁，安装上下文模块，通过验证，把补丁送过桥。','BUILD / VERIFY / DELIVER','组装 / 验证 / 派送'],
 ['lamda','LλMDA','The Missing City','缺失之城','Restore context pillars among floating ruins. Wire dependencies, cross the route, and project back to the original code.','修复浮空遗迹中的上下文支柱，连接依赖，走过通路，再投影回原代码。','RESTORE / CONNECT / CROSS','重建 / 连线 / 穿越'],
 ['alignment','Behavioral Alignment','Mirror District','语义镜城','Carry meaning through neon streets. Route matching signals, then discover why agreement can still be wrong.','让含义穿过霓虹街道，接通语义相同的信号，再发现：一致也可能是错的。','ROUTE / COMPARE / VERIFY','布线 / 对照 / 验证'],

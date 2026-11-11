@@ -24,6 +24,7 @@ def site_files():
         *(DOCS / 'research' / 'samples' / work / 'translations.js' for work in WORKS),
         *(DOCS / 'research' / 'games' / f'{work}.html' for work in WORKS),
         DOCS / 'research' / 'games' / 'attention.js',
+        DOCS / 'research' / 'games' / 'attention-model.js',
         DOCS / 'research' / 'games' / 'attention.css',
     ]
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
@@ -55,6 +56,8 @@ def main():
         for path in sorted((ROOT / 'preview').glob('*')):
             if path.is_file():
                 archive.write(path, Path('personal-website-source') / path.relative_to(ROOT))
+        for path in sorted((ROOT / 'tests').glob('*.cjs')):
+            archive.write(path, Path('personal-website-source') / path.relative_to(ROOT))
     page_count = sum(path.suffix == '.html' for path in files)
     print(f'Packaged {len(files)} static files and {page_count} HTML pages: '
           '18 research samples, 6 bespoke games, and English/Chinese resources.')

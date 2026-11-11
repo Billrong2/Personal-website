@@ -26,4 +26,4 @@ The eighteen research samples are original educational implementations. Interact
 
 ## Research game worlds and localization
 
-The six bespoke games (The Current Maze, Contract Courier, The Missing City, Mirror District, The Execution Express and Contradiction Citadel), their canvas scenes, sprites, and EN/ZH translations are original implementations in this repository. They add to the eighteen earlier candidates. Paper links are scholarly references; the games use authored educational examples rather than real model measurements.
+The six bespoke games (Code Steer, Contract Courier, The Missing City, Mirror District, The Execution Express and Contradiction Citadel), their canvas scenes, sprites, and EN/ZH translations are original implementations in this repository. They add to the eighteen earlier candidates. Paper links are scholarly references; the games use authored educational examples rather than real model measurements.

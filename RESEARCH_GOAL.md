@@ -16,7 +16,7 @@
 
 | 工作 | 游戏 | 页面 |
 |---|---|---|
-| CodeSteer | The Current Maze | [attention.html](docs/research/games/attention.html) |
+| CodeSteer | Code Steer | [attention.html](docs/research/games/attention.html) |
 | AdaptAgent | Contract Courier | [adaptagent.html](docs/research/games/adaptagent.html) |
 | LλMDA | The Missing City | [lamda.html](docs/research/games/lamda.html) |
 | Behavioral Alignment | Mirror District | [alignment.html](docs/research/games/alignment.html) |
@@ -24,6 +24,14 @@
 | SAFEMIN | The Contradiction Citadel | [safemin.html](docs/research/games/safemin.html) |
 
 这六个游戏是论文概念的教学实现，继续遵循下方的研究结果边界。Faded Light 音频尚未附带，GitHub Pages 线上发布仍未确认。
+
+## Code Steer 玩法修订 — 2026-11-11
+
+主标题保持 **Code Steer**，电流迷宫只作为进入论文后的场景。从 `return _0x91` 出发，走近混淆节点、读取运行记录、绑定观察值，再亲手接线并发出验证脉冲。四组节点要求五条手动连接；同一个当前值必须分别接入更新和条件判断，检查节点不会自动完成切片。
+
+移除装饰性粉色干扰与预先暴露的答案路线。错误电流只表示访客错误的追踪假设，不能暗示标识符混淆改变真实数据流。同样算出 12 的无关节点、数值相同的输入副本都必须按定义与使用关系排除。程序与输出始终保持不变；连接验证通过后才出现绿色电流与含义标签。
+
+八项逻辑测试、169 条节点间移动路线、五条接线的完整浏览器通关和重置已检查；中英切换保留状态。详细范围见 [VALIDATION.md](VALIDATION.md)。
 
 ## 18 个候选映射
 

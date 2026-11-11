@@ -50,14 +50,14 @@ python -m http.server 8000 --directory docs
 
 | 工作 | 独立游戏 | 页面 |
 | --- | --- | --- |
-| CodeSteer | The Current Maze | `attention.html` |
+| CodeSteer | Code Steer | `attention.html` |
 | AdaptAgent | Contract Courier | `adaptagent.html` |
 | LλMDA | The Missing City | `lamda.html` |
 | Behavioral Alignment | Mirror District | `alignment.html` |
 | PredEx | The Execution Express | `predex.html` |
 | SAFEMIN | The Contradiction Citadel | `safemin.html` |
 
-这些是用原创场景和可操作规则解释论文问题的教学游戏，不调用真实 LLM，也不把游戏得分当作论文实验指标。CodeSteer 的脚本和样式分别为 `attention.js`、`attention.css`。
+这些是用原创场景和可操作规则解释论文问题的教学游戏，不调用真实 LLM，也不把游戏得分当作论文实验指标。Code Steer 以论文名作为主标题，迷宫是游戏场景。探索隐藏节点、绑定运行值，再手动重接五条反向切片依赖；错误连线代表玩家的假设，混淆本身不改变数据流。脚本为 `attention.js`、`attention-model.js`，样式为 `attention.css`。逻辑回归：`node --test tests/code-steer.test.cjs`。
 
 ## 科研画廊与 18 个样例
 
